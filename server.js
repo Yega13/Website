@@ -5,7 +5,7 @@ const crypto = require('crypto');
 
 const app = express();
 app.use(express.json({ limit: '10mb' }));
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 app.post('/api/save', (req, res) => {
   fs.writeFileSync(path.join(__dirname, 'edits.json'), JSON.stringify(req.body, null, 2));
@@ -40,7 +40,7 @@ app.use((req, res) => {
   if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
     res.sendFile(filePath);
   } else {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
   }
 });
 
