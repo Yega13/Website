@@ -9,7 +9,7 @@
     editMode: false,
     edits: [],
     seo: {},
-    secretKey: null,
+    secretKey: admin,
     siteId: null,
     saveTimer: null,
     activeEl: null,
