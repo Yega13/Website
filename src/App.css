@@ -1,0 +1,19 @@
+/* ================================================
+   APP-LEVEL STYLES
+   ================================================ */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app>main {
+  flex: 1;
+}
+
+/* Blur header when gallery modal is open */
+body.modal-open .header {
+  filter: blur(8px);
+  pointer-events: none;
+}

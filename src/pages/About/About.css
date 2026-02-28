@@ -1,0 +1,406 @@
+/* ================================================
+   ABOUT PAGE
+   ================================================ */
+
+/* ——— HERO ——— */
+.about__hero {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-hero);
+    overflow: hidden;
+}
+
+.about__hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 40% 60%, rgba(201, 168, 76, 0.07) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 30%, rgba(201, 168, 76, 0.05) 0%, transparent 40%);
+}
+
+.about__hero-content {
+    position: relative;
+    text-align: center;
+    padding: calc(var(--header-height) + var(--sp-3xl)) var(--sp-lg) var(--sp-3xl);
+}
+
+.about__hero-tag {
+    display: inline-block;
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-accent-gold);
+    margin-bottom: var(--sp-lg);
+}
+
+.about__hero-title {
+    font-size: var(--fs-3xl);
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: var(--sp-md);
+    letter-spacing: -0.02em;
+}
+
+.about__hero-title--accent {
+    background: var(--gradient-gold);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about__hero-subtitle {
+    font-size: var(--fs-lg);
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+/* ——— Section utilities ——— */
+.about__section-header {
+    text-align: center;
+    margin-bottom: var(--sp-3xl);
+}
+
+.about__section-tag {
+    display: inline-block;
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-accent-gold);
+    margin-bottom: var(--sp-md);
+}
+
+.about__section-title {
+    font-size: var(--fs-2xl);
+    color: var(--color-text-primary);
+}
+
+/* ——— STORY ——— */
+.about__story {
+    padding: var(--sp-section) 0;
+}
+
+.about__story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-3xl);
+    align-items: center;
+}
+
+.about__story-image {
+    position: relative;
+}
+
+.about__story-image-wrapper {
+    position: relative;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    z-index: 1;
+}
+
+.about__story-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-card);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-md);
+    color: var(--color-text-muted);
+    font-size: var(--fs-md);
+}
+
+.about__story-image-icon {
+    font-size: 3rem;
+    color: var(--color-accent-gold);
+}
+
+.about__story-image-accent {
+    position: absolute;
+    top: var(--sp-lg);
+    left: var(--sp-lg);
+    right: calc(-1 * var(--sp-lg));
+    bottom: calc(-1 * var(--sp-lg));
+    border: 2px solid var(--color-accent-gold);
+    border-radius: var(--border-radius-lg);
+    opacity: 0.3;
+}
+
+.about__story-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-md);
+}
+
+.about__story-text p {
+    font-size: var(--fs-base);
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+}
+
+/* ——— VALUES ——— */
+.about__values {
+    padding: var(--sp-section) 0;
+    background: var(--color-bg-secondary);
+}
+
+.about__values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--sp-xl);
+}
+
+.about__value-card {
+    background: var(--gradient-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--sp-2xl);
+    text-align: center;
+    transition: transform var(--transition-base), box-shadow var(--transition-base),
+        border-color var(--transition-base);
+}
+
+.about__value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(13, 27, 42, 0.12), 0 0 0 1px rgba(201, 168, 76, 0.25);
+    border-color: rgba(201, 168, 76, 0.4);
+}
+
+.about__value-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--sp-md);
+    transition: transform var(--transition-hover);
+}
+
+.about__value-card:hover .about__value-icon {
+    transform: scale(1.15);
+}
+
+.about__value-title {
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    color: var(--color-text-primary);
+    margin-bottom: var(--sp-sm);
+}
+
+.about__value-desc {
+    font-size: var(--fs-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+/* ——— MILESTONES (Horizontal Journey) ——— */
+.about__milestones {
+    padding: var(--sp-section) 0;
+}
+
+.about__milestones-track {
+    position: relative;
+    padding-top: var(--sp-xl);
+}
+
+.about__milestones-line {
+    position: absolute;
+    top: calc(var(--sp-xl) + 70px + 12px);
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-accent-gold) 15%, var(--color-accent-gold) 85%, transparent 100%);
+    opacity: 0.3;
+}
+
+.about__milestones-scroll {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--sp-lg);
+    position: relative;
+}
+
+.about__milestone-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 0;
+}
+
+.about__milestone-year-badge {
+    width: 70px;
+    height: 70px;
+    border-radius: var(--border-radius-full);
+    background: var(--gradient-gold);
+    color: #1b1b2f;
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(201, 168, 76, 0.3);
+    position: relative;
+    z-index: 2;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.about__milestone-card:hover .about__milestone-year-badge {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(201, 168, 76, 0.45);
+}
+
+.about__milestone-dot {
+    width: 12px;
+    height: 12px;
+    margin: var(--sp-md) 0;
+    border-radius: var(--border-radius-full);
+    background: var(--color-accent-gold);
+    border: 3px solid var(--color-bg-primary);
+    box-shadow: 0 0 0 2px var(--color-accent-gold);
+    position: relative;
+    z-index: 2;
+}
+
+.about__milestone-body {
+    background: var(--gradient-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--sp-xl);
+    width: 100%;
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.about__milestone-card:hover .about__milestone-body {
+    border-color: rgba(201, 168, 76, 0.3);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.about__milestone-title {
+    font-family: var(--font-display);
+    font-size: var(--fs-md);
+    color: var(--color-text-primary);
+    margin-bottom: var(--sp-xs);
+}
+
+.about__milestone-desc {
+    font-size: var(--fs-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* ================================================
+   RESPONSIVE
+   ================================================ */
+
+@media (max-width: 1024px) {
+    .about__values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about__milestones-scroll {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .about__story-grid {
+        grid-template-columns: 1fr;
+        gap: var(--sp-2xl);
+    }
+
+    .about__story-image-wrapper {
+        aspect-ratio: 16 / 9;
+        max-height: 350px;
+    }
+
+    .about__story-image-accent {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .about__milestones-scroll {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about__milestones-line {
+        display: none;
+    }
+
+    .about__milestone-dot {
+        display: none;
+    }
+
+    .about__milestone-year-badge {
+        width: 60px;
+        height: 60px;
+        font-size: var(--fs-base);
+    }
+}
+
+@media (max-width: 640px) {
+    .about__values-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .about__hero {
+        min-height: 40vh;
+    }
+
+    .about__hero-title {
+        font-size: var(--fs-2xl);
+    }
+
+    .about__milestones-scroll {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 375px) {
+    .about__milestone-body {
+        padding: var(--sp-md);
+    }
+}
+
+@media (max-width: 320px) {
+    .about__value-card {
+        padding: var(--sp-lg);
+    }
+}
+
+@media (min-width: 1700px) {
+    .about__values-grid {
+        gap: var(--sp-2xl);
+    }
+
+    .about__milestones-scroll {
+        gap: var(--sp-2xl);
+    }
+}
+
+@media (min-width: 2000px) {
+    .about .container {
+        max-width: 1800px;
+    }
+
+    .about__story-grid {
+        gap: var(--sp-3xl);
+    }
+}

@@ -1,0 +1,150 @@
+/* ================================================
+   SKY BACKGROUND — REUSABLE COMPONENT 🌌⛅
+   ================================================ */
+
+.sky-background {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* ================================================
+   DARK MODE — STAR PARTICLES ✨
+   ================================================ */
+
+.sky-particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.sky-particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle linear infinite;
+    box-shadow:
+        0 0 5px rgba(255, 255, 255, 0.8),
+        0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.sky-particle:nth-child(even) {
+    width: 3px;
+    height: 3px;
+    background: #e0cc7a;
+    /* slight gold tint to some stars */
+    box-shadow:
+        0 0 6px rgba(201, 168, 76, 0.8),
+        0 0 12px rgba(201, 168, 76, 0.4);
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+/* ================================================
+   DAY SKY IMAGE CLOUDS 🌤️
+   ================================================ */
+
+[data-theme="light"] .sky-clouds {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+[data-theme="light"] .sky-cloud-img {
+    position: absolute;
+    will-change: transform;
+    /* Soften the image edges slightly to blend with sky */
+    filter: drop-shadow(0 20px 30px rgba(100, 150, 200, 0.15));
+}
+
+/* Cloud 1: Large, top right */
+[data-theme="light"] .sky-cloud-img--1 {
+    width: 650px;
+    top: -2%;
+    right: -10%;
+    opacity: 0.95;
+    animation: levitateCloud 18s ease-in-out infinite;
+    z-index: 5;
+}
+
+/* Cloud 2: Medium large, top left */
+[data-theme="light"] .sky-cloud-img--2 {
+    width: 500px;
+    top: 8%;
+    left: -8%;
+    opacity: 0.85;
+    animation: levitateCloudReverse 24s ease-in-out infinite;
+    z-index: 4;
+}
+
+/* Cloud 3: Midground, middle right but high up */
+[data-theme="light"] .sky-cloud-img--3 {
+    width: 350px;
+    top: 18%;
+    right: 25%;
+    opacity: 0.75;
+    animation: levitateCloud 20s ease-in-out infinite;
+    animation-delay: -5s;
+    z-index: 3;
+    filter: drop-shadow(0 20px 30px rgba(100, 150, 200, 0.1));
+}
+
+/* Cloud 4: Midground, center/left high up */
+[data-theme="light"] .sky-cloud-img--4 {
+    width: 250px;
+    top: 25%;
+    left: 20%;
+    opacity: 0.65;
+    animation: levitateCloudReverse 22s ease-in-out infinite;
+    animation-delay: -12s;
+    z-index: 3;
+}
+
+/* Smooth, floating levitation animations */
+@keyframes levitateCloud {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(15px, -20px);
+    }
+}
+
+@keyframes levitateCloudReverse {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-15px, 15px);
+    }
+}

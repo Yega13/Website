@@ -1,0 +1,31 @@
+.back-to-top {
+    position: fixed;
+    bottom: var(--sp-xl);
+    right: var(--sp-xl);
+    z-index: var(--z-sticky);
+    width: 48px;
+    height: 48px;
+    border-radius: var(--border-radius-full);
+    background: var(--gradient-gold);
+    color: var(--color-text-inverse);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    cursor: pointer;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-xl), var(--shadow-glow);
+}
+
+@media (max-width: 480px) {
+    .back-to-top {
+        width: 42px;
+        height: 42px;
+        bottom: var(--sp-lg);
+        right: var(--sp-lg);
+    }
+}

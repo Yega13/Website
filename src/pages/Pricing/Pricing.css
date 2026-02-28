@@ -1,0 +1,443 @@
+/* ================================================
+   PRICING PAGE
+   ================================================ */
+
+/* ——— HERO ——— */
+.pricing-page__hero {
+    position: relative;
+    min-height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-hero);
+    overflow: hidden;
+}
+
+.pricing-page__hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 50% 60%, rgba(201, 168, 76, 0.07) 0%, transparent 50%);
+    z-index: 2;
+}
+
+.pricing-page__hero-content {
+    position: relative;
+    text-align: center;
+    padding: calc(var(--header-height) + var(--sp-3xl)) var(--sp-lg) var(--sp-3xl);
+    z-index: 3;
+}
+
+.pricing-page__hero-tag {
+    display: inline-block;
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-accent-gold);
+    margin-bottom: var(--sp-lg);
+}
+
+.pricing-page__hero-title {
+    font-size: var(--fs-3xl);
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: var(--sp-md);
+    letter-spacing: -0.02em;
+}
+
+.pricing-page__hero-subtitle {
+    font-size: var(--fs-lg);
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 550px;
+    margin-inline: auto;
+}
+
+/* ——— SECTION HEADER ——— */
+.pricing-page__section-header {
+    text-align: center;
+    margin-bottom: var(--sp-3xl);
+}
+
+.pricing-page__section-tag {
+    display: inline-block;
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-accent-gold);
+    margin-bottom: var(--sp-md);
+}
+
+.pricing-page__section-title {
+    font-size: var(--fs-2xl);
+    color: var(--color-text-primary);
+    margin-bottom: var(--sp-md);
+}
+
+.pricing-page__section-desc {
+    font-size: var(--fs-base);
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin-inline: auto;
+    line-height: 1.7;
+}
+
+/* ——— SEQUIN TYPES ——— */
+.pricing-page__types {
+    padding: var(--sp-section) 0;
+}
+
+.pricing-page__types-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--sp-xl);
+}
+
+.pricing-page__type-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--sp-2xl) var(--sp-xl);
+    text-align: center;
+    transition: transform var(--transition-spring), box-shadow var(--transition-base), border-color var(--transition-fast);
+}
+
+.pricing-page__type-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(13, 27, 42, 0.12), 0 0 0 1px rgba(201, 168, 76, 0.25);
+    border-color: rgba(201, 168, 76, 0.4);
+}
+
+.pricing-page__type-icon {
+    margin-bottom: var(--sp-lg);
+    display: flex;
+    justify-content: center;
+    transition: transform var(--transition-hover);
+}
+
+.pricing-page__type-card:hover .pricing-page__type-icon {
+    transform: scale(1.12);
+}
+
+.pricing-page__type-name {
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--sp-sm);
+}
+
+.pricing-page__type-desc {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--sp-lg);
+}
+
+.pricing-page__type-colors {
+    display: flex;
+    gap: var(--sp-sm);
+    justify-content: center;
+}
+
+.pricing-page__type-swatch {
+    width: 24px;
+    height: 24px;
+    border-radius: var(--border-radius-full);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform var(--transition-spring);
+}
+
+.pricing-page__type-swatch:hover {
+    transform: scale(1.2);
+}
+
+/* ——— PRICING PLANS (staircase) ——— */
+.pricing-page__plans {
+    padding: var(--sp-section) 0;
+    background: var(--color-bg-secondary);
+}
+
+.pricing-page__plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-xl);
+    align-items: start;
+}
+
+.pricing-page__plan-card {
+    position: relative;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--sp-2xl) var(--sp-xl) var(--sp-xl);
+    text-align: center;
+    transition: transform var(--transition-spring), box-shadow var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    min-height: 520px;
+}
+
+/* Staircase: each card shifts down */
+.pricing-page__plan-card--step-0 {
+    margin-top: 0;
+}
+
+.pricing-page__plan-card--step-1 {
+    margin-top: 60px;
+}
+
+.pricing-page__plan-card--step-2 {
+    margin-top: 120px;
+}
+
+.pricing-page__plan-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(13, 27, 42, 0.12), 0 0 0 1px rgba(201, 168, 76, 0.2);
+}
+
+.pricing-page__plan-card--highlight {
+    border-color: var(--color-accent-gold);
+    box-shadow: 0 0 0 1px var(--color-accent-gold), var(--shadow-lg);
+}
+
+.pricing-page__plan-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gradient-gold);
+    color: #1b1b2f;
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 20px;
+    border-radius: var(--border-radius-full);
+    white-space: nowrap;
+}
+
+.pricing-page__plan-name {
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--sp-md);
+}
+
+.pricing-page__plan-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: var(--sp-xs);
+    margin-bottom: 2px;
+}
+
+.pricing-page__plan-amount {
+    font-family: var(--font-display);
+    font-size: var(--fs-3xl);
+    font-weight: 800;
+    color: var(--color-accent-gold);
+    line-height: 1;
+}
+
+.pricing-page__plan-unit {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--color-text-muted);
+}
+
+.pricing-page__plan-period {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+    margin-bottom: var(--sp-md);
+}
+
+.pricing-page__plan-desc {
+    font-size: var(--fs-sm);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--sp-xl);
+    padding-bottom: var(--sp-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.pricing-page__plan-features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-sm);
+    margin-bottom: var(--sp-xl);
+    text-align: left;
+    flex: 1;
+}
+
+.pricing-page__plan-feature {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-sm);
+    font-size: var(--fs-sm);
+    color: var(--color-text-secondary);
+}
+
+.pricing-page__plan-feature svg {
+    flex-shrink: 0;
+}
+
+.pricing-page__plan-cta {
+    display: inline-block;
+    width: 100%;
+    padding: var(--sp-md);
+    border-radius: var(--border-radius-md);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-align: center;
+    color: var(--color-text-primary);
+    background: transparent;
+    border: 2px solid var(--color-border-strong);
+    transition: background var(--transition-fast), color var(--transition-fast),
+        border-color var(--transition-fast), transform var(--transition-spring);
+    text-decoration: none;
+    margin-top: auto;
+}
+
+.pricing-page__plan-cta:hover {
+    background: var(--gradient-gold);
+    border-color: transparent;
+    color: #1b1b2f;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(201, 168, 76, 0.3);
+}
+
+.pricing-page__plan-card--highlight .pricing-page__plan-cta {
+    background: var(--gradient-gold);
+    color: #1b1b2f;
+    border-color: transparent;
+}
+
+.pricing-page__plan-card--highlight .pricing-page__plan-cta:hover {
+    box-shadow: 0 4px 20px rgba(201, 168, 76, 0.4);
+}
+
+/* ——— CUSTOM CTA ——— */
+.pricing-page__custom {
+    padding: var(--sp-section) 0;
+}
+
+.pricing-page__custom-inner {
+    text-align: center;
+    background: var(--gradient-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-xl);
+    padding: var(--sp-3xl) var(--sp-2xl);
+}
+
+.pricing-page__custom-title {
+    font-size: var(--fs-2xl);
+    color: var(--color-text-primary);
+    margin-bottom: var(--sp-md);
+}
+
+.pricing-page__custom-desc {
+    font-size: var(--fs-base);
+    color: var(--color-text-muted);
+    max-width: 500px;
+    margin-inline: auto;
+    margin-bottom: var(--sp-xl);
+    line-height: 1.7;
+}
+
+.pricing-page__custom-btn {
+    display: inline-block;
+    padding: var(--sp-md) var(--sp-2xl);
+    background: var(--gradient-gold);
+    color: #1b1b2f;
+    font-weight: 700;
+    font-size: var(--fs-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-radius: var(--border-radius-full);
+    transition: transform var(--transition-spring), box-shadow var(--transition-base);
+    text-decoration: none;
+}
+
+.pricing-page__custom-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(201, 168, 76, 0.4);
+}
+
+/* ========================
+   RESPONSIVE
+   ======================== */
+
+@media (max-width: 1024px) {
+    .pricing-page__types-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing-page__plans-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing-page__plan-card--step-1 {
+        margin-top: 40px;
+    }
+
+    .pricing-page__plan-card--step-2 {
+        margin-top: 0;
+    }
+
+    .pricing-page__plan-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 460px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .pricing-page__types-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-inline: auto;
+    }
+
+    .pricing-page__plans-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin-inline: auto;
+    }
+
+    .pricing-page__plan-card--step-0,
+    .pricing-page__plan-card--step-1,
+    .pricing-page__plan-card--step-2 {
+        margin-top: 0;
+    }
+
+    .pricing-page__plan-card {
+        min-height: auto;
+    }
+
+    .pricing-page__plan-card:last-child {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-page__hero {
+        min-height: 35vh;
+    }
+
+    .pricing-page__hero-title {
+        font-size: var(--fs-2xl);
+    }
+
+    .pricing-page__custom-inner {
+        padding: var(--sp-2xl) var(--sp-lg);
+    }
+}
+
+@media (min-width: 2000px) {
+    .pricing-page .container {
+        max-width: 1800px;
+    }
+}

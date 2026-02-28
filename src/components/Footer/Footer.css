@@ -1,0 +1,379 @@
+/* ================================================
+   FOOTER — Dark & Gold Premium Redesign
+   Inspired by luxury event/wedding brand aesthetics
+   ================================================ */
+
+.footer {
+    background: #0a0a0f;
+    color: #b8b8c0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle shimmer texture overlay */
+.footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 600px 400px at 20% 50%, rgba(201, 168, 76, 0.04) 0%, transparent 70%),
+        radial-gradient(ellipse 400px 300px at 80% 80%, rgba(201, 168, 76, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* ——— Decorative Top Edge ——— */
+.footer__edge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+    position: relative;
+}
+
+.footer__edge-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.4), transparent);
+}
+
+.footer__edge-diamond {
+    padding: 12px 24px;
+    color: #c9a84c;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    flex-shrink: 0;
+}
+
+/* ——— Inner Container ——— */
+.footer__inner {
+    position: relative;
+    z-index: 1;
+    padding-top: 60px;
+    padding-bottom: 32px;
+}
+
+/* ——— Brand Area (centered) ——— */
+.footer__brand {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.footer__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.footer__logo:hover {
+    opacity: 0.85;
+}
+
+.footer__logo-text {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #d4b35a, #e8cc78, #c9a84c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.08em;
+}
+
+.footer__tagline {
+    font-size: 0.9rem;
+    color: rgba(184, 184, 192, 0.7);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* ——— Grid Columns ——— */
+.footer__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px;
+    padding: 48px 0;
+    border-top: 1px solid rgba(201, 168, 76, 0.12);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+}
+
+/* Column headings */
+.footer__heading {
+    font-family: var(--font-primary);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #c9a84c;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+/* Navigation links */
+.footer__links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer__link {
+    font-size: 0.88rem;
+    color: rgba(184, 184, 192, 0.75);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.footer__link:hover {
+    color: #e8cc78;
+    transform: translateX(4px);
+}
+
+/* Contact item links */
+.footer__link--contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer__link--contact svg {
+    color: rgba(201, 168, 76, 0.6);
+    flex-shrink: 0;
+    transition: color 0.3s ease;
+}
+
+.footer__link--contact:hover svg {
+    color: #e8cc78;
+}
+
+.footer__link--static {
+    cursor: default;
+}
+
+.footer__link--static:hover {
+    transform: none;
+}
+
+/* Hours */
+.footer__hours {
+    font-size: 0.88rem;
+    color: rgba(184, 184, 192, 0.75);
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+/* Socials block inside column */
+.footer__socials-block {
+    margin-top: 0;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 10px;
+}
+
+.footer__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(201, 168, 76, 0.25);
+    color: rgba(201, 168, 76, 0.7);
+    background: transparent;
+    transition: all 0.35s ease;
+}
+
+.footer__social-link:hover {
+    background: rgba(201, 168, 76, 0.12);
+    border-color: rgba(201, 168, 76, 0.5);
+    color: #e8cc78;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(201, 168, 76, 0.15);
+}
+
+/* ——— Bottom Bar ——— */
+.footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 28px;
+}
+
+.footer__copyright {
+    font-size: 0.78rem;
+    color: rgba(184, 184, 192, 0.4);
+    letter-spacing: 0.03em;
+}
+
+.footer__bottom-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer__bottom-link {
+    font-size: 0.78rem;
+    color: rgba(184, 184, 192, 0.4);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer__bottom-link:hover {
+    color: #c9a84c;
+}
+
+.footer__bottom-dot {
+    color: rgba(184, 184, 192, 0.25);
+    font-size: 0.78rem;
+}
+
+/* ========================
+   RESPONSIVE
+   ======================== */
+
+@media (max-width: 1024px) {
+    .footer__grid {
+        gap: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__inner {
+        padding-top: 48px;
+    }
+
+    .footer__brand {
+        margin-bottom: 40px;
+    }
+
+    .footer__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+    }
+
+    .footer__col:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer__inner {
+        padding-top: 36px;
+    }
+
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .footer__links {
+        align-items: center;
+    }
+
+    .footer__link:hover {
+        transform: none;
+    }
+
+    .footer__link--contact {
+        justify-content: center;
+    }
+
+    .footer__socials {
+        justify-content: center;
+    }
+
+    .footer__logo-text {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 2000px) {
+    .footer__inner {
+        max-width: 1600px;
+    }
+
+    .footer__logo-text {
+        font-size: 2.4rem;
+    }
+
+    .footer__grid {
+        gap: 80px;
+    }
+}
+
+/* ================================================
+   DAY MODE FOOTER — Bright & Natural 🌿☀️
+   ================================================ */
+[data-theme="light"] .footer {
+    background: #f4f9ff;
+    color: #4a5d73;
+    border-top: 1px solid rgba(135, 206, 235, 0.3);
+}
+
+[data-theme="light"] .footer::before {
+    background:
+        radial-gradient(ellipse 600px 400px at 20% 50%, rgba(201, 168, 76, 0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 400px 300px at 80% 80%, rgba(201, 168, 76, 0.06) 0%, transparent 70%);
+}
+
+[data-theme="light"] .footer__edge-line {
+    background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.5), transparent);
+}
+
+[data-theme="light"] .footer__edge-diamond {
+    color: #c9a84c;
+}
+
+[data-theme="light"] .footer__logo {
+    color: #1a2540;
+}
+
+[data-theme="light"] .footer__tagline {
+    color: #5c728e;
+}
+
+[data-theme="light"] .footer__heading {
+    color: #1a2540;
+}
+
+[data-theme="light"] .footer__link {
+    color: #4a5d73;
+}
+
+[data-theme="light"] .footer__link:hover {
+    color: #c9a84c;
+    /* Gold hover */
+}
+
+[data-theme="light"] .footer__social {
+    border-color: rgba(135, 206, 235, 0.5);
+    color: #4a5d73;
+}
+
+[data-theme="light"] .footer__social:hover {
+    background: rgba(201, 168, 76, 0.1);
+    border-color: #c9a84c;
+    color: #1a2540;
+}
+
+[data-theme="light"] .footer__bottom {
+    border-color: rgba(135, 206, 235, 0.3);
+}
+
+[data-theme="light"] .footer__copyright {
+    color: #7189a3;
+}

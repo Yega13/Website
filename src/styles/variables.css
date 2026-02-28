@@ -1,0 +1,125 @@
+/* ================================================
+   AIRWALL — CSS CUSTOM PROPERTIES (DESIGN TOKENS)
+   ================================================ */
+
+:root {
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+
+  --fs-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.8rem);
+  --fs-sm: clamp(0.8rem, 0.75rem + 0.3vw, 0.9rem);
+  --fs-base: clamp(0.9rem, 0.85rem + 0.3vw, 1rem);
+  --fs-md: clamp(1rem, 0.9rem + 0.5vw, 1.15rem);
+  --fs-lg: clamp(1.15rem, 1rem + 0.7vw, 1.4rem);
+  --fs-xl: clamp(1.4rem, 1.1rem + 1.2vw, 2rem);
+  --fs-2xl: clamp(1.8rem, 1.3rem + 2vw, 2.8rem);
+  --fs-3xl: clamp(2.2rem, 1.5rem + 3vw, 3.8rem);
+  --fs-hero: clamp(3rem, 2rem + 4.5vw, 5.5rem);
+
+  /* Spacing */
+  --sp-xs: clamp(0.25rem, 0.2rem + 0.2vw, 0.5rem);
+  --sp-sm: clamp(0.5rem, 0.4rem + 0.4vw, 0.75rem);
+  --sp-md: clamp(0.75rem, 0.6rem + 0.6vw, 1.25rem);
+  --sp-lg: clamp(1rem, 0.8rem + 1vw, 2rem);
+  --sp-xl: clamp(1.5rem, 1rem + 2vw, 3rem);
+  --sp-2xl: clamp(2rem, 1.5rem + 2.5vw, 4rem);
+  --sp-3xl: clamp(3rem, 2rem + 4vw, 6rem);
+  --sp-section: clamp(5rem, 3.5rem + 6vw, 10rem);
+
+  /* Layout */
+  --max-width: 1400px;
+  --header-height: 72px;
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+  --border-radius-xl: 32px;
+  --border-radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 180ms ease;
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-hover: 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* Z-index scale */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 500;
+  --z-modal: 10000;
+  --z-toast: 11000;
+}
+
+/* ================================================
+   LIGHT THEME — "DAY SKY" ☀️
+   Sky-blue backgrounds, warm sunlight accents, cloud-white cards
+   ================================================ */
+[data-theme="light"] {
+  --color-bg-primary: #eef5ff;
+  --color-bg-secondary: #dce8f8;
+  --color-bg-tertiary: #c8daf0;
+  --color-bg-card: #ffffff;
+  --color-bg-header: rgba(238, 245, 255, 0.88);
+
+  --color-text-primary: #1a2540;
+  --color-text-secondary: #44556b;
+  --color-text-muted: #7189a3;
+  --color-text-inverse: #eef5ff;
+
+  --color-accent-gold: #c9a84c;
+  --color-accent-gold-light: #e0cc7a;
+  --color-accent-gold-dark: #a68a30;
+  --color-accent-rose: #c45a6b;
+  --color-accent-navy: #0d1b2a;
+
+  --color-border: rgba(26, 37, 64, 0.1);
+  --color-border-strong: rgba(26, 37, 64, 0.18);
+
+  --shadow-sm: 0 1px 3px rgba(26, 37, 64, 0.06);
+  --shadow-md: 0 4px 12px rgba(26, 37, 64, 0.08);
+  --shadow-lg: 0 8px 30px rgba(26, 37, 64, 0.1);
+  --shadow-xl: 0 16px 50px rgba(26, 37, 64, 0.12);
+  --shadow-glow: 0 0 40px rgba(108, 180, 238, 0.2);
+  /* glow tint to green */
+
+  --gradient-gold: linear-gradient(135deg, #c9a84c 0%, #e0cc7a 50%, #c9a84c 100%);
+  --gradient-hero: linear-gradient(170deg, #2563a8 0%, #3a7bd5 25%, #6cb4ee 60%, #87CEEB 100%);
+  --gradient-card: linear-gradient(145deg, #ffffff 0%, #f4f8ff 100%);
+}
+
+/* ================================================
+   DARK THEME
+   ================================================ */
+[data-theme="dark"] {
+  --color-bg-primary: #0b0e14;
+  --color-bg-secondary: #12161f;
+  --color-bg-tertiary: #1a1f2e;
+  --color-bg-card: #151a26;
+  --color-bg-header: rgba(11, 14, 20, 0.88);
+
+  --color-text-primary: #e8e6df;
+  --color-text-secondary: #a0a0b0;
+  --color-text-muted: #6a6a7a;
+  --color-text-inverse: #0b0e14;
+
+  --color-accent-gold: #d4b35a;
+  --color-accent-gold-light: #e8cc78;
+  --color-accent-gold-dark: #b89840;
+  --color-accent-rose: #e06070;
+  --color-accent-navy: #1e3a5f;
+
+  --color-border: rgba(232, 230, 223, 0.08);
+  --color-border-strong: rgba(232, 230, 223, 0.15);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.35);
+  --shadow-xl: 0 16px 50px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 40px rgba(212, 179, 90, 0.12);
+
+  --gradient-gold: linear-gradient(135deg, #d4b35a 0%, #e8cc78 50%, #d4b35a 100%);
+  --gradient-hero: linear-gradient(135deg, #0b0e14 0%, #12161f 40%, #1a1f2e 100%);
+  --gradient-card: linear-gradient(145deg, #151a26 0%, #1a1f2e 100%);
+}
